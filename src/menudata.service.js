@@ -11,18 +11,25 @@ function MenuDataServiceController($http) {
     return service;
         
     service.getAllCategories = function () {
-        return $http({
+        console.log("Hey1");
+        var promise = $http({
             method: "GET",
             url: ("https://davids-restaurant.herokuapp.com/categories.json")
-        }); 
+        }).then(function(result) {
+            console.log("Hey2");
+            return result.data;
+        });
     };
         
     service.getItemsForCategory = function(categoryShortName) {
-        return $http({
+        var promise = $http({
             url: 'https://davids-restaurant.herokuapp.com/menu_items.json', 
             params: {
                 category: categoryShortName
             }
+        }).then(function(result) {
+            console.log("Hey2");
+            return result.data;
         });
 	};
 }

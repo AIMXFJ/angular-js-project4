@@ -7,8 +7,8 @@
   ItemsController.$inject = ['items'];
   function ItemsController(items) {
     var catItems = this;
-    catItems.menuItems = items.data.menu_items;
-    catItems.name = items.data.category.name;
+    catItems.menuItems = items.menu_items;
+    catItems.name = items.category.name;
   };
 
 })();
