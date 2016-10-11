@@ -7,7 +7,7 @@
   CategoriesComponentController.$inject = ['items'];
   function CategoriesComponentController(items) {
   	var catCtrl = this;
-    this.items = items.data;
+    this.items = items;
   };
   
 })();
