@@ -7,8 +7,7 @@ angular.module('Data')
 MenuDataServiceController.$inject = ['$http'];
 function MenuDataServiceController($http) {
 	var service = this;
-        
-    return service;
+    console.log("Hey0");
         
     service.getAllCategories = function () {
         console.log("Hey1");
@@ -22,6 +21,7 @@ function MenuDataServiceController($http) {
     };
         
     service.getItemsForCategory = function(categoryShortName) {
+        console.log("Hey1");
         var promise = $http({
             url: 'https://davids-restaurant.herokuapp.com/menu_items.json', 
             params: {
