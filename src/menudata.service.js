@@ -14,21 +14,25 @@ function MenuDataServiceController($http) {
         var promise = $http({
             method: "GET",
             url: ("https://davids-restaurant.herokuapp.com/categories.json")
-        }).then(function(result) {
-            console.log("Hey2");
+        });
+
+        return promise.then(function(result) {
             return result.data;
         });
     };
         
     service.getItemsForCategory = function(categoryShortName) {
-        console.log("Hey1");
+        console.log("Hey3");
         var promise = $http({
             url: 'https://davids-restaurant.herokuapp.com/menu_items.json', 
             params: {
                 category: categoryShortName
             }
-        }).then(function(result) {
-            console.log("Hey2");
+        });
+
+        return promise.then(function(result) {
+            console.log("Hey4");
+            console.log(result.data);
             return result.data;
         });
 	};
