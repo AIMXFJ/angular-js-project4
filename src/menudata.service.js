@@ -24,7 +24,7 @@ function MenuDataServiceController($http) {
     service.getItemsForCategory = function(categoryShortName) {
         console.log("Hey3");
         var promise = $http({
-            url: 'https://davids-restaurant.herokuapp.com/menu_items.json', 
+            url: 'https://davids-restaurant.herokuapp.com/menu_items.json?category=' + categoryShortName, 
             params: {
                 category: categoryShortName
             }
