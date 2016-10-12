@@ -10,6 +10,8 @@
   	console.log("Hey2");
     this.items = items;
     console.log(this.items);
+    console.log("After promise data");
+    console.log(this.items[0].short_name);
   };
   
 })();
